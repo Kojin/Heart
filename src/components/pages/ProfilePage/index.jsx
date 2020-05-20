@@ -1,3 +1,4 @@
+//#region > Imports
 //> React
 // Contains all the functionality necessary to define React components
 import React from "react";
@@ -16,10 +17,7 @@ import { signOut } from "../../../store/actions/authActions";
 
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
-import {
-  MDBContainer,
-  MDBBtn,
-} from "mdbreact";
+import { MDBContainer, MDBBtn } from "mdbreact";
 //> Components
 // To be added here
 
@@ -28,12 +26,15 @@ import {
 
 //> Images
 // To be added here
+//#endregion
 
+//#region > Components
 class ProfilePage extends React.Component {
   state = {};
 
   render() {
     const { auth, profile, users } = this.props;
+
     // Check if firebase has loaded profile data
     if (!profile.isLoaded) {
       return (
@@ -50,10 +51,7 @@ class ProfilePage extends React.Component {
       return (
         <MDBContainer className="text-center my-5 py-5">
           <h2>Logged in</h2>
-          <MDBBtn
-          color="elegant"
-          onClick={() => this.props.signOut()}
-          >
+          <MDBBtn color="elegant" onClick={() => this.props.signOut()}>
             Logout
           </MDBBtn>
         </MDBContainer>
@@ -61,7 +59,9 @@ class ProfilePage extends React.Component {
     }
   }
 }
+//#endregion
 
+//#region > Functions
 const mapStateToProps = (state) => {
   console.log(state);
   return {
@@ -75,11 +75,14 @@ const mapDispatchToProps = (dispatch) => {
     signOut: () => dispatch(signOut()),
   };
 };
+//#endregion
 
+//#region > Exports
 export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(withRouter(ProfilePage));
+//#endregion
 
 /**
  * SPDX-License-Identifier: (EUPL-1.2)

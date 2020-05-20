@@ -2,7 +2,17 @@
     "editor.fontFamily": "Fira Code, Consolas, 'Courier New', monospace",
     "editor.fontLigatures": true,
     "editor.snippetSuggestions": "top",
-    "editor.rulers": [120],
+    "editor.rulers": [80,120],
+    "editor.formatOnSave": false,
+    "[javascriptreact]": {
+        "editor.formatOnSave": true
+    },
+    "[javascript]": {
+        "editor.formatOnSave": true
+    },
+    "[scss]": {
+        "editor.formatOnSave": true
+    },
     "terminal.integrated.fontFamily": "Consolas",
     "workbench.colorTheme": "Dracula Soft",
     "cSpell.ignoreWords": [

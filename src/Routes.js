@@ -1,3 +1,4 @@
+//#region > Imports
 //> React
 // Contains all the functionality necessary to define React components
 import React from "react";
@@ -14,7 +15,9 @@ import {
   LoginPage,
   ProfilePage,
 } from "./components/pages";
+//#endregion
 
+//#region > Components
 class Routes extends React.Component {
   render() {
     return (
@@ -22,10 +25,10 @@ class Routes extends React.Component {
         <Route exact path="/" component={HomePage} />
         <Route exact path="/login" component={LoginPage} />
         <Route exact path="/profile" component={ProfilePage} />
-        <Route 
-        exact
-        path='/about'
-        render={(props) => <MessagePage {...props}/>}
+        <Route
+          exact
+          path="/about"
+          render={(props) => <MessagePage {...props} />}
         />
         <Route
           render={function () {
@@ -36,10 +39,13 @@ class Routes extends React.Component {
     );
   }
 }
+//#endregion
 
+//#region > Exports
 export default Routes;
+//#endregion
 
-/** 
+/**
  * SPDX-License-Identifier: (EUPL-1.2)
- * Copyright © 2019-2020 Werbeagentur Christian Aichner
+ * Copyright © 2020 Werbeagentur Christian Aichner
  */

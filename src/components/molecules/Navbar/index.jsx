@@ -1,3 +1,4 @@
+//#region > Imports
 //> React
 // Contains all the functionality necessary to define React components
 import React from "react";
@@ -17,7 +18,9 @@ import {
 
 // React Logo
 import { ReactComponent as Logo } from "../../../assets/logo.svg";
+//#endregion
 
+//#region > Components
 class Navbar extends React.Component {
   state = {
     collapseID: "",
@@ -43,13 +46,16 @@ class Navbar extends React.Component {
     );
 
     const { collapseID } = this.state;
+
     return (
       <div>
         <MDBNavbar color="white" light expand="md" fixed="top" scrolling>
           <MDBContainer>
             <MDBNavbarBrand href="/" className="py-0 font-weight-bold">
               <Logo style={{ height: "2.5rem", width: "2.5rem" }} />
-              <strong className="align-middle">MDB React Firebase Template</strong>
+              <strong className="align-middle">
+                MDB React Firebase Template
+              </strong>
             </MDBNavbarBrand>
             <MDBNavbarToggler
               onClick={this.toggleCollapse("mainNavbarCollapse")}
@@ -87,10 +93,13 @@ class Navbar extends React.Component {
     );
   }
 }
+//#endregion
 
+//#region > Exports
 export default Navbar;
+//#endregion
 
 /**
  * SPDX-License-Identifier: (EUPL-1.2)
- * Copyright © 2019-2020 Werbeagentur Christian Aichner
+ * Copyright © 2020 Werbeagentur Christian Aichner
  */

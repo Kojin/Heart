@@ -1,3 +1,4 @@
+//#region > Imports
 //> React
 // Contains all the functionality necessary to define React components
 import React from "react";
@@ -34,7 +35,9 @@ import IMGlogo from "../../../assets/agency-small.png";
 //> Configuration
 // The route of your profile page (include /)
 const profileRoute = "/profile";
+//#endregion
 
+//#region > Components
 class LoginPage extends React.Component {
   state = {
     email: "",
@@ -45,7 +48,6 @@ class LoginPage extends React.Component {
 
   submitHandler = (event) => {
     event.preventDefault();
-
     this._loginUser();
   };
 
@@ -99,7 +101,12 @@ class LoginPage extends React.Component {
 
     return (
       <MDBContainer id="login" className="text-center pt-5 mt-5">
-        <img src={IMGlogo} style={{maxWidth: "100%", maxHeight: "150px"}} alt="SithCult logo" className="img-fluid" />
+        <img
+          src={IMGlogo}
+          style={{ maxWidth: "100%", maxHeight: "150px" }}
+          alt="SithCult logo"
+          className="img-fluid"
+        />
         <form onSubmit={this.submitHandler}>
           <MDBRow className="flex-center">
             <MDBCol md="4">
@@ -144,7 +151,9 @@ class LoginPage extends React.Component {
     );
   }
 }
+//#endregion
 
+//#region > Functions
 const mapStateToProps = (state) => {
   return {
     authErrorDetails: state.auth.authErrorDetails,
@@ -157,11 +166,14 @@ const mapDispatchToProps = (dispatch) => {
     signIn: (credentials) => dispatch(signIn(credentials)),
   };
 };
+//#endregion
 
+//#region > Exports
 export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(withRouter(LoginPage));
+//#endregion
 
 /**
  * SPDX-License-Identifier: (EUPL-1.2)

@@ -1,3 +1,4 @@
+//#region > Imports
 //> React
 // Contains all the functionality necessary to define React components
 import React from "react";
@@ -28,7 +29,9 @@ import Projects from "../../../assets/content/projects.jpg";
 
 //> CSS
 import "./HomePage.scss";
+//#endregion
 
+//#region > Compontents
 class HomePage extends React.Component {
   render() {
     return (
@@ -140,10 +143,13 @@ class HomePage extends React.Component {
     );
   }
 }
+//#endregion
 
+//#region > Exports
 export default HomePage;
+//#endregion
 
 /**
  * SPDX-License-Identifier: (EUPL-1.2)
- * Copyright © 2019-2020 Werbeagentur Christian Aichner
+ * Copyright © 2020 Werbeagentur Christian Aichner
  */

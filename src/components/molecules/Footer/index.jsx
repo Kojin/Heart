@@ -1,3 +1,4 @@
+//#region > Imports
 //> React
 // Contains all the functionality necessary to define React components
 import React from "react";
@@ -6,20 +7,16 @@ import { Link } from "react-router-dom";
 
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
-import {
-  MDBFooter,
-  MDBRow,
-  MDBCol,
-  MDBContainer,
-  MDBIcon,
-} from "mdbreact";
+import { MDBFooter, MDBRow, MDBCol, MDBContainer, MDBIcon } from "mdbreact";
 
 //> CSS
 import "./footer.scss";
 
 //> Images
 import logoImg from "../../../assets/agency-small.png";
+//#endregion
 
+//#region > Components
 class Footer extends React.Component {
   state = {
     pathBack: "",
@@ -29,17 +26,21 @@ class Footer extends React.Component {
     if (this.props.location) {
       let i = 1;
       let pathBack = "";
+
       // Check the number of slashes to fix relative links
       while (i < this.props.location.pathname.split("/").length - 1) {
         pathBack += "../";
         i++;
       }
+
       console.log(pathBack);
+
       this.setState({
         pathBack,
       });
     }
   };
+
   render() {
     return (
       <MDBFooter color="white" className="font-small">
@@ -125,10 +126,13 @@ class Footer extends React.Component {
     );
   }
 }
+//#endregion
 
+//#region > Exports
 export default Footer;
+//#endregion
 
 /**
  * SPDX-License-Identifier: (EUPL-1.2)
- * Copyright © 2019-2020 Werbeagentur Christian Aichner
+ * Copyright © 2020 Werbeagentur Christian Aichner
  */

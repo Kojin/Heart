@@ -1,4 +1,5 @@
-export const signIn = (credentials) => {
+//#region > Functions
+const signIn = (credentials) => {
   return (dispatch, getState, { getFirebase }) => {
     const firebase = getFirebase();
 
@@ -19,7 +20,7 @@ export const signIn = (credentials) => {
   };
 };
 
-export const signInAnonymous = (credentials) => {
+const signInAnonymous = (credentials) => {
   return (dispatch, getState, { getFirebase }) => {
     const firebase = getFirebase();
 
@@ -40,7 +41,7 @@ export const signInAnonymous = (credentials) => {
   };
 };
 
-export const signOut = () => {
+const signOut = () => {
   return (dispatch, getState, { getFirebase }) => {
     const firebase = getFirebase();
 
@@ -54,6 +55,11 @@ export const signOut = () => {
       });
   };
 };
+//#endregion
+
+//#region > Exports
+export { signIn, signInAnonymous, signOut };
+//#endregion
 
 /**
  * SPDX-License-Identifier: (EUPL-1.2)
