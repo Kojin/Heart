@@ -1,3 +1,4 @@
+//#region > Imports
 //> React
 // Contains all the functionality necessary to define React components
 import React from "react";
@@ -17,7 +18,9 @@ import {
 
 // React Logo
 import { ReactComponent as Logo } from "../../../assets/logo.svg";
+//#endregion
 
+//#region > Components
 class Navbar extends React.Component {
   state = {
     collapseID: "",
@@ -87,8 +90,11 @@ class Navbar extends React.Component {
     );
   }
 }
+//#endregion
 
+//#region > Exports
 export default Navbar;
+//#endregion
 
 /**
  * SPDX-License-Identifier: (EUPL-1.2)

@@ -1,10 +1,16 @@
-// Have initial state for when state is not ready to be passed
-const initState = {
+//> Constant Variables
+/**
+ * Have initial state for when state is not ready to be passed.
+ * 
+ * @constant
+ */
+const INIT_STATE = {
   authError: null,
   authErrorDetails: null,
 };
 
-const authReducer = (state = initState, action) => {
+//#region > Functions
+const authReducer = (state = INIT_STATE, action) => {
   switch (action.type) {
     case "LOGIN_ERROR":
       console.log("Error", action.err);
@@ -52,8 +58,11 @@ const authReducer = (state = initState, action) => {
       return state;
   }
 };
+//#endregion
 
+//#region > Exports
 export default authReducer;
+//#endregion
 
 /**
  * SPDX-License-Identifier: (EUPL-1.2)

@@ -1,3 +1,4 @@
+//#region > Imports
 //> React
 // Contains all the functionality necessary to define React components
 import React from "react";
@@ -28,7 +29,9 @@ import {
 
 //> Images
 // To be added here
+//#endregion
 
+//#region > Components
 class ProfilePage extends React.Component {
   state = {};
 
@@ -61,7 +64,9 @@ class ProfilePage extends React.Component {
     }
   }
 }
+//#endregion
 
+//#region > Functions
 const mapStateToProps = (state) => {
   console.log(state);
   return {
@@ -75,11 +80,14 @@ const mapDispatchToProps = (dispatch) => {
     signOut: () => dispatch(signOut()),
   };
 };
+//#endregion
 
+//#region > Exports
 export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(withRouter(ProfilePage));
+//#endregion
 
 /**
  * SPDX-License-Identifier: (EUPL-1.2)

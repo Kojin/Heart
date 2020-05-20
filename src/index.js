@@ -1,3 +1,4 @@
+//#region > Imports
 //> React
 // Contains all the functionality necessary to define React components
 import React from "react";
@@ -44,22 +45,24 @@ import { reduxFirestore, getFirestore } from "redux-firestore";
 import { reactReduxFirebase, getFirebase } from "react-redux-firebase";
 // Firebase config
 import fbInit from "./config/fbInit";
+//#endregion
 
+//> Constant Variables
 /**
  * FIREBASE INIT SETTINGS
  */
 // Automatically load user data to logged in user (realtime functionality). Sync user data to user profile.
-const syncUserToAuth = true;
+const SYNC_USER_TO_AUTH = true;
 /**
- * Set user collection
+ * Set user collection.
  * The name of the collection can vary from project to project. Check Firebase for information.
  * This tells Redux Firebase where the users are being stored.
  */
-const userCollection = "partners";
+const USER_COLLECTION = "partners";
 // Enable firebase initializing before DOM rendering
-const onlyLoadWhenReady = true;
+const ONLY_LOAD_WHEN_READY = true;
 // Create Redux data-store and store it in store and apply thunk middleware
-const store = createStore(
+const STORE = createStore(
   rootReducer,
   compose(
     applyMiddleware(
@@ -70,15 +73,16 @@ const store = createStore(
     ),
     reduxFirestore(fbInit),
     reactReduxFirebase(fbInit, {
-      useFirestoreForProfile: syncUserToAuth,
-      userProfile: userCollection,
-      attachAuthIsReady: onlyLoadWhenReady,
+      useFirestoreForProfile: SYNC_USER_TO_AUTH,
+      userProfile: USER_COLLECTION,
+      attachAuthIsReady: ONLY_LOAD_WHEN_READY,
     })
   )
 );
 
+//> Document Render
 // Wait until firebase is initialized, then render the DOM
-store.firebaseAuthIsReady.then(() => {
+STORE.firebaseAuthIsReady.then(() => {
   // Render the DOM
   ReactDOM.render(
     <Provider store={store}>

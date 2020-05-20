@@ -1,3 +1,4 @@
+//#region > Imports
 //> React
 // Contains all the functionality necessary to define React components
 import React from "react";
@@ -15,7 +16,9 @@ import {
 } from "./components/molecules";
 // Routes
 import Routes from "./Routes";
+//#endregion
 
+//#region > Components
 class App extends React.Component {
   render() {
     return (
@@ -31,8 +34,11 @@ class App extends React.Component {
     );
   }
 }
+//#endregion
 
+//#region > Exports
 export default App;
+//#endregion
 
 /** 
  * SPDX-License-Identifier: (EUPL-1.2)

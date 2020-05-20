@@ -1,3 +1,4 @@
+//#region > Imports
 //> React
 // Contains all the functionality necessary to define React components
 import React from "react";
@@ -19,7 +20,9 @@ import "./footer.scss";
 
 //> Images
 import logoImg from "../../../assets/agency-small.png";
+//#endregion
 
+//#region > Components
 class Footer extends React.Component {
   state = {
     pathBack: "",
@@ -125,8 +128,11 @@ class Footer extends React.Component {
     );
   }
 }
+//#endregion
 
+//#region > Exports
 export default Footer;
+//#endregion
 
 /**
  * SPDX-License-Identifier: (EUPL-1.2)
