@@ -1,7 +1,7 @@
 //> Constant Variables
 /**
  * Have initial state for when state is not ready to be passed.
- * 
+ *
  * @constant
  */
 const INIT_STATE = {

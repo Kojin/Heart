@@ -8,12 +8,7 @@ import ProfilePage from "./ProfilePage";
 //#endregion
 
 //#region > Exports
-export { 
-  HomePage,
-  MessagePage,
-  LoginPage,
-  ProfilePage,
-};
+export { HomePage, MessagePage, LoginPage, ProfilePage };
 //#endregion
 
 /**

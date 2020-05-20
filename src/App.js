@@ -10,10 +10,7 @@ import { BrowserRouter as Router } from "react-router-dom";
  * Footer: Global Footer
  * Navbar: Global navigation bar
  */
-import {
-  Footer,
-  Navbar,
-} from "./components/molecules";
+import { Footer, Navbar } from "./components/molecules";
 // Routes
 import Routes from "./Routes";
 //#endregion
@@ -40,7 +37,7 @@ class App extends React.Component {
 export default App;
 //#endregion
 
-/** 
+/**
  * SPDX-License-Identifier: (EUPL-1.2)
  * Copyright © 2020 Werbeagentur Christian Aichner
  */

@@ -6,13 +6,10 @@ import Navbar from "./Navbar";
 //#endregion
 
 //#region > Exports
-export {
-  Footer,
-  Navbar,
-};
+export { Footer, Navbar };
 //#endregion
 
-/** 
+/**
  * SPDX-License-Identifier: (EUPL-1.2)
  * Copyright © 2020 Werbeagentur Christian Aichner
  */

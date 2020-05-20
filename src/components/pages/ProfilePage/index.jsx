@@ -17,10 +17,7 @@ import { signOut } from "../../../store/actions/authActions";
 
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
-import {
-  MDBContainer,
-  MDBBtn,
-} from "mdbreact";
+import { MDBContainer, MDBBtn } from "mdbreact";
 //> Components
 // To be added here
 
@@ -53,10 +50,7 @@ class ProfilePage extends React.Component {
       return (
         <MDBContainer className="text-center my-5 py-5">
           <h2>Logged in</h2>
-          <MDBBtn
-          color="elegant"
-          onClick={() => this.props.signOut()}
-          >
+          <MDBBtn color="elegant" onClick={() => this.props.signOut()}>
             Logout
           </MDBBtn>
         </MDBContainer>

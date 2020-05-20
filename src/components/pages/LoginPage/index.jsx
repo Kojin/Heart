@@ -102,7 +102,12 @@ class LoginPage extends React.Component {
 
     return (
       <MDBContainer id="login" className="text-center pt-5 mt-5">
-        <img src={IMGlogo} style={{maxWidth: "100%", maxHeight: "150px"}} alt="SithCult logo" className="img-fluid" />
+        <img
+          src={IMGlogo}
+          style={{ maxWidth: "100%", maxHeight: "150px" }}
+          alt="SithCult logo"
+          className="img-fluid"
+        />
         <form onSubmit={this.submitHandler}>
           <MDBRow className="flex-center">
             <MDBCol md="4">

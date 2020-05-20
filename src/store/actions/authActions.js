@@ -58,11 +58,7 @@ const signOut = () => {
 //#endregion
 
 //#region > Exports
-export {
-  signIn,
-  signInAnonymous,
-  signOut
-}
+export { signIn, signInAnonymous, signOut };
 //#endregion
 
 /**

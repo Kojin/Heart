@@ -11,7 +11,7 @@ import { MDBContainer, MDBBtn, MDBAlert, MDBIcon } from "mdbreact";
 //> Constant Variables
 /**
  * Placeholder texts for the message component.
- * 
+ *
  * @constant
  */
 const ABOUT_PLACEHOLDER = {
