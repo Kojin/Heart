@@ -22,6 +22,7 @@ const ABOUT_PLACEHOLDER = {
   city: "City",
   mail: "mail@mail.com",
 };
+//#endregion
 
 //#region > Components
 class MessagePage extends React.Component {
@@ -110,6 +111,7 @@ class MessagePage extends React.Component {
 //#region > Exports
 export default MessagePage;
 //#endregion
+
 /**
  * SPDX-License-Identifier: (EUPL-1.2)
  * Copyright © 2020 Werbeagentur Christian Aichner

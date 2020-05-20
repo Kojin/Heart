@@ -13,12 +13,14 @@ import { firestoreReducer } from "redux-firestore";
 import { firebaseReducer } from "react-redux-firebase";
 //#endregion
 
-//> Constant Variables
+//#region > Combined Reducers
+// These constants can be accessed via mapStateToProps functions
 const rootReducer = combineReducers({
   auth: authReducer,
   firestore: firestoreReducer,
   firebase: firebaseReducer, // Authentication
 });
+//#endregion
 
 //#region > Exports
 export default rootReducer;
