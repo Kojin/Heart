@@ -389,4 +389,4 @@ including **Christian Aichner** [@Aichnerc](https://github.com/Aichnerc) and **F
 Notable contributors to our coding style: **Nico Schett** [@schettn](https://github.com/schettn), **David Pinterics** [@pinterid](https://github.com/pinterid)
 
 SPDX-License-Identifier: (EUPL-1.2)
-Copyright © 2019-2020 Werbeagentur Christian Aichner
+Copyright © 2020 Werbeagentur Christian Aichner
