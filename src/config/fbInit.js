@@ -11,6 +11,7 @@ import config from "./fbConfig.js";
 
 // Init Firebase
 firebase.initializeApp(config);
+
 // Init analytics
 if (config.measurementId) {
   firebase.analytics();

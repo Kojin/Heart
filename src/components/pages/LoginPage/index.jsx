@@ -48,7 +48,6 @@ class LoginPage extends React.Component {
 
   submitHandler = (event) => {
     event.preventDefault();
-
     this._loginUser();
   };
 

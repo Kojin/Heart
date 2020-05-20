@@ -34,6 +34,7 @@ class ProfilePage extends React.Component {
 
   render() {
     const { auth, profile, users } = this.props;
+
     // Check if firebase has loaded profile data
     if (!profile.isLoaded) {
       return (

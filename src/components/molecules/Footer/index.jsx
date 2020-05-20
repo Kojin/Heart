@@ -26,17 +26,21 @@ class Footer extends React.Component {
     if (this.props.location) {
       let i = 1;
       let pathBack = "";
+
       // Check the number of slashes to fix relative links
       while (i < this.props.location.pathname.split("/").length - 1) {
         pathBack += "../";
         i++;
       }
+
       console.log(pathBack);
+
       this.setState({
         pathBack,
       });
     }
   };
+
   render() {
     return (
       <MDBFooter color="white" className="font-small">
