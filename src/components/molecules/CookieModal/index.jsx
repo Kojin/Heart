@@ -24,7 +24,7 @@ import "./cookie.scss";
 //#region > Components
 class ModalPage extends React.Component {
   state = {
-    modal1: localStorage.getItem("cookie") ? false : true,
+    showModal: localStorage.getItem("cookie") ? false : true,
     essential: true,
     statistics: false,
     marketing: false,
@@ -49,7 +49,7 @@ class ModalPage extends React.Component {
         marketing: this.state.marketing ? true : false,
       })
     );
-    this.setState({ modal1: false }, () => this.props.saveCookie());
+    this.setState({ showModal: false }, () => this.props.saveCookie());
   }
 
   toggle = (nr) => () => {
@@ -70,7 +70,7 @@ class ModalPage extends React.Component {
   render() {
     return (
       <MDBModal
-        isOpen={this.state.modal1}
+        isOpen={this.state.showModal}
         toggle={this.toggle(1)}
         disableFocusTrap={false}
         keyboard={false}
