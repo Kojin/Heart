@@ -90,7 +90,7 @@ class ModalPage extends React.Component {
               checked={this.state.essential}
               disabled
               type="checkbox"
-              id="cookieEssenziell"
+              id="essential"
               containerClass="mr-5"
             />
             <MDBFormInline className="d-flex justify-content-center">
@@ -101,7 +101,7 @@ class ModalPage extends React.Component {
                 name="marketing"
                 color="primary"
                 type="checkbox"
-                id="cookieMarketing"
+                id="marketing"
                 containerClass="mr-5"
                 onChange={(e) => this.checkBoxCheck(e)}
               />
@@ -111,7 +111,7 @@ class ModalPage extends React.Component {
                 checked={this.state.statistics}
                 name="statistics"
                 type="checkbox"
-                id="cookieStatistiken"
+                id="statistics"
                 containerClass="mr-5"
                 onChange={(e) => this.checkBoxCheck(e)}
               />
