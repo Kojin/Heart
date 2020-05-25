@@ -12,7 +12,7 @@ import ReactGA from "react-ga";
 import ReactPixel from "react-facebook-pixel";
 
 //> Components
-// Navbar, Footer and Cookie Modal
+// Navbar, Footer and cookie modal
 import { Footer, Navbar, CookieModal } from "./components/molecules";
 // Starts the page on top when reloaded or redirected
 import { ScrollToTop } from "./components/atoms";
@@ -42,6 +42,7 @@ class App extends React.Component {
 
     if (cookie) {
       cookie = JSON.parse(cookie);
+
       if (cookie.marketing || cookie.statistics) {
         if (
           window.location.hostname !== "localhost" &&
