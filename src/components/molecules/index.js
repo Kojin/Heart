@@ -3,10 +3,11 @@
 // Import all components to export them for easy access from parent components
 import Footer from "./Footer";
 import Navbar from "./Navbar";
+import CookieModal from "./CookieModal";
 //#endregion
 
 //#region > Exports
-export { Footer, Navbar };
+export { Footer, Navbar, CookieModal };
 //#endregion
 
 /**
