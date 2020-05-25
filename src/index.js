@@ -85,7 +85,7 @@ const STORE = createStore(
 STORE.firebaseAuthIsReady.then(() => {
   // Render the DOM
   ReactDOM.render(
-    <Provider store={store}>
+    <Provider store={STORE}>
       <App />
     </Provider>,
     document.getElementById("root")
