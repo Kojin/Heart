@@ -6,11 +6,10 @@ import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 
 //> Components
-/**
- * Footer: Global Footer
- * Navbar: Global navigation bar
- */
+// Navbar and Footer
 import { Footer, Navbar } from "./components/molecules";
+// Starts the page on top when reloaded or redirected
+import { ScrollToTop } from "./components/atoms";
 // Routes
 import Routes from "./Routes";
 //#endregion
@@ -20,13 +19,15 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <div className="flyout">
-          <Navbar />
-          <main>
-            <Routes />
-          </main>
-          <Footer />
-        </div>
+        <ScrollToTop>
+          <div className="flyout">
+            <Navbar />
+            <main>
+              <Routes />
+            </main>
+            <Footer />
+          </div>
+        </ScrollToTop>
       </Router>
     );
   }
